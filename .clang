@@ -1,0 +1,2 @@
+flags = -I/usr/include/freetype2 -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fvisibility-inlines-hidden -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_THREAD_SAFE -D_REENTRANT
+
