@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
     Fl_Box* text = new Fl_Box(0, 0, 500, 500, res.c_str());
     w->end();
 
-    text->labelsize(32);
+    text->labelsize(52);
     w->show();
 
     return Fl::run();
