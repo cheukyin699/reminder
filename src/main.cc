@@ -2,6 +2,7 @@
 #include <FL/Fl_Window.H>
 #include <FL/Fl_Box.H>
 
+#include <memory>
 #include <sstream>
 
 int main(int argc, char** argv) {
@@ -10,8 +11,8 @@ int main(int argc, char** argv) {
         ss << argv[i] << "\n";
     }
     std::string res = ss.str();
-    Fl_Window* w = new Fl_Window(500, 500, "Reminder");
-    Fl_Box* text = new Fl_Box(0, 0, 500, 500, res.c_str());
+    std::unique_ptr<Fl_Window> w(new Fl_Window(500, 500, "Reminder"));
+    std::unique_ptr<Fl_Box> text(new Fl_Box(0, 0, 500, 500, res.c_str()));
     w->end();
 
     text->labelsize(52);
